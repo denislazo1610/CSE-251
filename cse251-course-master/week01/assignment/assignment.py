@@ -2,12 +2,12 @@
 Course: CSE 251 
 Lesson Week: 01
 File: assignment.py 
-Author: <Add name here>
+Author: Luc Comeau
 
 Purpose: Drawing with Python Turtle
 
 The follow program will draw a series of shapes - squares, circles, triangles
-and rectangles.  
+and rectangles.
 
 There is a Python class called cse251Turtle that is used to hold the drawing
 commands that are created by the program.  This is required because threads can
@@ -20,6 +20,10 @@ Instructions:
   currently imported below.
 - You can create other functions if needed.
 - No global variables.
+
+Categorie: Meets requirements
+I did this with a classmate. We did not give the answer, but help each other to find the solution.
+The program works well according to requirements, it draws all the shapes at the end
 
 """
 
