@@ -93,32 +93,52 @@ def draw_coord_system(tur, x, y, size=300, color='black'):
         tur.backward(size)
         tur.left(90)
 
-def draw_squares(tur):
+def draw_squares(tur, lock = False):
     """Draw a group of squares"""
     for x in range(-300, 350, 200):
         for y in range(-300, 350, 200):
-            draw_square(tur, x - 50, y + 50, 100)
+            if(lock):
+                lock.acquire()
+                draw_square(tur, x - 50, y + 50, 100)
+                lock.release()
+            else:
+                draw_square(tur, x - 50, y + 50, 100)
 
 
-def draw_circles(tur):
+def draw_circles(tur, lock= False):
     """Draw a group of circles"""
     for x in range(-300, 350, 200):
         for y in range(-300, 350, 200):
-            draw_circle(tur, x, y-2, 50)
+            if(lock):
+                lock.acquire()
+                draw_circle(tur, x, y-2, 50)
+                lock.release()
+            else:
+                draw_circle(tur, x, y-2, 50)
 
 
-def draw_triangles(tur):
+def draw_triangles(tur, lock=False):
     """Draw a group of triangles"""
     for x in range(-300, 350, 200):
         for y in range(-300, 350, 200):
-            draw_triangle(tur, x-30, y-30+10, 60)
+            if(lock):
+                lock.acquire()
+                draw_triangle(tur, x-30, y-30+10, 60)
+                lock.release()
+            else:
+                draw_triangle(tur, x-30, y-30+10, 60)
 
 
-def draw_rectangles(tur):
+def draw_rectangles(tur, lock=False):
     """Draw a group of Rectangles"""
     for x in range(-300, 350, 200):
         for y in range(-300, 350, 200):
-            draw_rectangle(tur, x-10, y+5, 20, 15)
+            if(lock):
+                lock.acquire()
+                draw_rectangle(tur, x-10, y+5, 20, 15)
+                lock.release()
+            else:
+                draw_rectangle(tur, x-10, y+5, 20, 15)
 
 
 def run_no_threads(tur, log, main_turtle):
@@ -163,6 +183,21 @@ def run_with_threads(tur, log, main_turtle):
     # TODO - Start add your code here.
     # You need to use 4 threads where each thread concurrently drawing one type of shape.
     # You are free to change any functions in this code except main()
+
+    lock = threading.Lock()
+
+    threadArray = [
+    threading.Thread(target=draw_squares, args= (tur, lock)),
+    threading.Thread(target=draw_circles, args= (tur, lock)),
+    threading.Thread(target=draw_triangles, args= (tur, lock)),
+    threading.Thread(target=draw_rectangles, args= (tur, lock))]
+
+    for thread in threadArray:
+        thread.start()
+
+    for thread in threadArray:
+        thread.join()
+ 
 
     log.step_timer('All drawing commands have been created')
 
