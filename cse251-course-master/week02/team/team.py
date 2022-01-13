@@ -26,6 +26,22 @@ set_working_directory(__file__)
 
 class Request_thread(threading.Thread):
     # TODO - Add code to make an API call and return the results
+
+    def __init__(self, url):
+        # calling parent class constructor
+        threading.Thread.__init__(self)
+        self.url = url
+        self.reponse = {}
+
+
+    def run(self):
+        info = requests.get(self.url)
+        self.response = info.json()
+        # print_dict(self.response)
+    
+        
+    	
+
     # https://realpython.com/python-requests/
     pass
 
@@ -39,9 +55,25 @@ class Deck:
 
     def reshuffle(self):
         # TODO - add call to reshuffle
+        print("Reshuffle starts")
+        reshuffle = Request_thread(f'http://deckofcardsapi.com/api/deck/{self.id}/shuffle/')
+        reshuffle.start()
+        reshuffle.join()
+        print("Reshuffle ends")
+        
+        # print_dict(reshuffleInfo)
         pass
 
     def draw_card(self):
+        # print("Draw starts")
+        draw = Request_thread(f'http://deckofcardsapi.com/api/deck/{self.id}/draw/')
+        draw.start()
+        draw.join()
+        # if draw.response["cards"] != []:
+            
+        return draw.response["cards"][0]['code']
+
+        # print("Draw ends")
         # TODO add call to get a card
         pass
 
@@ -62,7 +94,7 @@ if __name__ == '__main__':
     #        team_get_deck_id.py program once. You can have
     #        multiple decks if you need them
 
-    deck_id = 'ENTER ID HERE'
+    deck_id = 'krsljgciu1w2'
 
     # Testing Code >>>>>
     deck = Deck(deck_id)
