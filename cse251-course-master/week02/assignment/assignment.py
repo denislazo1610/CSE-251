@@ -44,6 +44,16 @@ call_count = 0
 
 
 # TODO Add your threaded class definition here
+class request_thread(threading.Thread):
+    def __init__(self, url):
+        print("Create thread class")
+        threading.Thread.__init__(self)
+        self.url = url
+        
+    def run(self):
+        info = requests.get(self.url)
+        print_dict(info.json())
+        # print("Running all function from threat")
 
 
 # TODO Add any functions you need here
@@ -54,6 +64,11 @@ def main():
     log.start_timer('Starting to retrieve data from swapi.dev')
 
     # TODO Retrieve Top API urls
+    informacion = request_thread(TOP_API_URL)
+
+    informacion.start()
+    call_count =+ 1
+    informacion.join()
 
     # TODO Retireve Details on film 6
 
