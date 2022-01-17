@@ -24,6 +24,11 @@ use this dictionary to make other API calls for data.
    "starships": "http://swapi.dev/api/starships/"
 }
 
+Category: Made it my own
+
+I tried to save time and more accurate on doing my programm. The outcome was supposed to 
+take 10 seconds, mine takes 8 seconds. I believe it fulfill the requirements.
+
 ------------------------------------------------------------------------------
 """
 
