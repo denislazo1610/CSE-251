@@ -160,9 +160,35 @@ def main():
     board.display()
 
     start = time.perf_counter()
+
+
+    # Proccesses
+    # with mp.Pool(13) as p:
+    #     p.map(board.find_word, words)
     for word in words:
-        if not board.find_word(word):
-            print(f'Error: Could not find "{word}"')
+        thread = mp.Process(target=board.find_word, args=(word,))
+        thread.start()
+        thread.join()
+
+
+        
+    # Threads
+
+    # threads = []
+
+    # for word in words:
+    #     thread = threading.Thread(target=board.find_word, args=(word,))
+    #     thread.start()
+    #     threads.append(thread)
+
+    # for thread in threads:
+    #     thread.join()
+
+    # for word in words:
+    #     if not board.find_word(word):
+    #         print(f'Error: Could not find "{word}"')
+
+    
     total_time = time.perf_counter() - start
 
     board.display()

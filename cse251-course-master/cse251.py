@@ -179,3 +179,6 @@ class Plots:
 
         if show_plot:
             plt.show()
+
+
+print(range(0,100))

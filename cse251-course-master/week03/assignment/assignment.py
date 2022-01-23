@@ -81,15 +81,44 @@ if __name__ == '__main__':
 
     # sample code: remove before submitting  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     # process one frame #10
-    image_number = 10
 
-    image_file = rf'elephant/image{image_number:03d}.png'
-    green_file = rf'green/image{image_number:03d}.png'
-    process_file = rf'processed/image{image_number:03d}.png'
+    # CHANGING?
+    # 300 frames in total
 
-    start_time = timeit.default_timer()
-    create_new_frame(image_file, green_file, process_file)
-    print(f'\nTime To Process all images = {timeit.default_timer() - start_time}')
+    framesBy3 = []
+
+
+    # Adding numbers 1 to 300 to numbers
+    for i in range(1,301):
+        image_file = rf'elephant/image{i:03d}.png'
+        green_file = rf'green/image{i:03d}.png'
+        process_file = rf'processed/image{i:03d}.png'
+        framesBy3.append((image_file, green_file, process_file))
+
+  
+    print(framesBy3)
+    print()
+    print()
+    print()
+        
+    # with mp.Pool(1) as p:
+    #   start_time = timeit.default_timer()
+    #   p.map(create_new_frame, *framesBy3)
+    #   print(f'\nTime To Process all images = {timeit.default_timer() - start_time}')
+
+
+
+
+
+    # image_number = 10
+
+    # image_file = rf'elephant/image{image_number:03d}.png'
+    # green_file = rf'green/image{image_number:03d}.png'
+    # process_file = rf'processed/image{image_number:03d}.png'
+
+    # start_time = timeit.default_timer()
+    # create_new_frame(image_file, green_file, process_file)
+    # print(f'\nTime To Process all images = {timeit.default_timer() - start_time}')
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
