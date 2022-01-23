@@ -39,14 +39,14 @@ GREEN = 1
 BLUE  = 2
 
 
-def create_new_frame(image_file, green_file, process_file):
+def create_new_frame(file):
     """ Creates a new image file from image_file and green_file """
 
     # this print() statement is there to help see which frame is being processed
-    print(f'{process_file[-7:-4]}', end=',', flush=True)
+    print(f'{file[2][-7:-4]}', end=',', flush=True)
 
-    image_img = Image.open(image_file)
-    green_img = Image.open(green_file)
+    image_img = Image.open(file[0])
+    green_img = Image.open(file[1])
 
     # Make Numpy array
     np_img = np.array(green_img)
@@ -58,7 +58,7 @@ def create_new_frame(image_file, green_file, process_file):
     mask_img = Image.fromarray((mask*255).astype(np.uint8))
 
     image_new = Image.composite(image_img, green_img, mask_img)
-    image_new.save(process_file)
+    image_new.save(file[2])
 
 
 # TODO add any functions to need here
@@ -96,15 +96,13 @@ if __name__ == '__main__':
         framesBy3.append((image_file, green_file, process_file))
 
   
-    print(framesBy3)
-    print()
-    print()
-    print()
+    # print(framesBy3)
+
         
-    # with mp.Pool(1) as p:
-    #   start_time = timeit.default_timer()
-    #   p.map(create_new_frame, *framesBy3)
-    #   print(f'\nTime To Process all images = {timeit.default_timer() - start_time}')
+    with mp.Pool(CPU_COUNT) as p:
+      start_time = timeit.default_timer()
+      # p.map(create_new_frame, framesBy3)
+      print(f'\nTime for 300 frames using {mp.cpu_count()} processes: = {timeit.default_timer() - start_time}')
 
 
 
