@@ -14,6 +14,10 @@ Instructions:
   Do not change any of the from and import statements.
 - Only process the given MP4 files for this assignment
 
+Made it my own
+
+I learned a lot using multiproccessing library, and how this can be usefull. 
+I feel like my assignment works pretty well
 ------------------------------------------------------------------------------
 """
 
@@ -32,7 +36,7 @@ CPU_COUNT = mp.cpu_count() + 4
 
 # TODO Your final video need to have 300 processed frames.  However, while you are 
 # testing your code, set this much lower
-FRAME_COUNT = 20
+FRAME_COUNT = 300
 
 RED   = 0
 GREEN = 1
@@ -82,11 +86,8 @@ if __name__ == '__main__':
     # sample code: remove before submitting  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     # process one frame #10
 
-    # CHANGING?
-    # 300 frames in total
 
     framesBy3 = []
-
 
     # Adding numbers 1 to 300 to numbers
     for i in range(1,301):
@@ -95,14 +96,14 @@ if __name__ == '__main__':
         process_file = rf'processed/image{i:03d}.png'
         framesBy3.append((image_file, green_file, process_file))
 
-  
-    # print(framesBy3)
+    for number in range(1, CPU_COUNT):
+      with mp.Pool(number) as p:
+        start_time = timeit.default_timer()
+        p.map(create_new_frame, framesBy3)
+        xaxis_cpus.append(number)
+        yaxis_times.append(timeit.default_timer() - start_time)
 
-        
-    with mp.Pool(CPU_COUNT) as p:
-      start_time = timeit.default_timer()
-      # p.map(create_new_frame, framesBy3)
-      print(f'\nTime for 300 frames using {mp.cpu_count()} processes: = {timeit.default_timer() - start_time}')
+        log.write(f'Time for 300 frames using {number} processes: = {timeit.default_timer() - start_time}')
 
 
 
