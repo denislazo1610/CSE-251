@@ -12,6 +12,9 @@ Instructions:
 
 """
 
+from asyncio import Queue
+from multiprocessing import Semaphore
+import queue
 import time
 import threading
 import random
@@ -21,9 +24,9 @@ from cse251 import *
 set_working_directory(__file__)
 
 # Global Consts - Do not change
-CARS_TO_PRODUCE = 500
-MAX_QUEUE_SIZE = 10
-SLEEP_REDUCE_FACTOR = 50
+CARS_TO_PRODUCE = 500 # 500
+MAX_QUEUE_SIZE = 10 #10
+SLEEP_REDUCE_FACTOR = 50 #50
 
 # NO GLOBAL VARIABLES!
 
@@ -76,10 +79,16 @@ class Queue251():
 class Factory(threading.Thread):
     """ This is a factory.  It will create cars and place them on the car queue """
 
-    def __init__(self):
+    def __init__(self, queue, empty, full):
         # TODO, you need to add arguments that will pass all of data that 1 factory needs
         # to create cars and to place them in a queue.
-        pass
+        threading.Thread.__init__(self)
+        self.newCars= queue 
+        self.empty = empty
+        self.full = full
+        self.number = 0
+
+
 
 
     def run(self):
@@ -91,6 +100,16 @@ class Factory(threading.Thread):
             signal the dealer that there is a car on the queue
            """
 
+            self.full.acquire()
+            
+            newCar = Car()
+            self.newCars.put(newCar)
+            self.number += 1
+            print(f'We made N{self.number} car')
+            self.empty.release()
+
+            print(' -FACTORY')
+            print('\n')
         # signal the dealer that there there are not more cars
         pass
 
@@ -98,9 +117,16 @@ class Factory(threading.Thread):
 class Dealer(threading.Thread):
     """ This is a dealer that receives cars """
 
-    def __init__(self):
+    def __init__(self, queue, goal, stats, empty, full):
         # TODO, you need to add arguments that pass all of data that 1 Dealer needs
         # to sell a car
+        threading.Thread.__init__(self)
+        self.cars = queue
+        self.goal = goal # CARS_TO_PRODUCE
+        self.stats = stats
+        self.empty = empty
+        self.full = full
+        self.quantitySold = 0
         pass
 
     def run(self):
@@ -111,9 +137,35 @@ class Dealer(threading.Thread):
             signal the factory that there is an empty slot in the queue
             """
 
-            # Sleep a little after selling a car
-            # Last statement in this for loop - don't change
+            if(self.quantitySold == self.goal):
+                break
+
+            self.empty.acquire()
+
+
+            self.stats[self.cars.size()] += 1
+
+                
+            outCar = self.cars.get()
+
+            self.quantitySold = self.quantitySold + 1
+            print(f'We sold {self.quantitySold} cars')
+
+            
+
             time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
+            self.full.release()
+
+
+
+            print("-Dealer")
+            print('\n')
+
+
+
+
+            # Last statement in this for loop - don't change
+            pass
 
 
 
@@ -121,7 +173,13 @@ def main():
     log = Log(show_terminal=True)
 
     # TODO Create semaphore(s)
+    full = Semaphore(10)
+    
+    empty = Semaphore(0)
+    
     # TODO Create queue251 
+    newQueue = Queue251()
+
     # TODO Create lock(s) ?
 
     # This tracks the length of the car queue during receiving cars by the dealership
@@ -130,11 +188,31 @@ def main():
 
     # TODO create your one factory
 
+    newFactory = Factory(newQueue, empty, full)
+
+
     # TODO create your one dealership
+
+    newDealerShip = Dealer(newQueue, CARS_TO_PRODUCE, queue_stats, empty, full)
 
     log.start_timer()
 
     # TODO Start factory and dealership
+
+
+    newFactory.start()
+    newDealerShip.start()
+
+    newDealerShip.join()
+    newFactory.join()
+
+
+    print("\nThings in QUEUE") 
+
+    for i in newQueue.items:
+        i.display()
+
+    print(f'Queau has {newQueue.size()} cars')
 
     # TODO Wait for factory and dealership to complete
 

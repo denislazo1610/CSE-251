@@ -1,0 +1,2 @@
+quantitySold == self.goal):
+            #     break
