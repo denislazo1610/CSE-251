@@ -1,2 +1,2 @@
-quantitySold == self.goal):
-            #     break
+1
+            print(f'We sold {self.quantitySold} cars')

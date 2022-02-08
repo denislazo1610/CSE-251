@@ -79,7 +79,7 @@ class Queue251():
 class Factory(threading.Thread):
     """ This is a factory.  It will create cars and place them on the car queue """
 
-    def __init__(self, queue, empty, full):
+    def __init__(self, queue, empty, full, stats):
         # TODO, you need to add arguments that will pass all of data that 1 factory needs
         # to create cars and to place them in a queue.
         threading.Thread.__init__(self)
@@ -87,6 +87,7 @@ class Factory(threading.Thread):
         self.empty = empty
         self.full = full
         self.number = 0
+        self.stats = stats
 
 
 
@@ -100,11 +101,13 @@ class Factory(threading.Thread):
             signal the dealer that there is a car on the queue
            """
 
+            # self.stats[self.newCars.size()] += 1
             self.full.acquire()
             
             newCar = Car()
             self.newCars.put(newCar)
             self.number += 1
+
             print(f'We made N{self.number} car')
             self.empty.release()
 
@@ -137,16 +140,17 @@ class Dealer(threading.Thread):
             signal the factory that there is an empty slot in the queue
             """
 
+            self.stats[self.cars.size()] += 1
             if(self.quantitySold == self.goal):
                 break
 
             self.empty.acquire()
 
+            outCar = self.cars.get()
 
-            self.stats[self.cars.size()] += 1
+            
 
                 
-            outCar = self.cars.get()
 
             self.quantitySold = self.quantitySold + 1
             print(f'We sold {self.quantitySold} cars')
@@ -155,14 +159,6 @@ class Dealer(threading.Thread):
 
             time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
             self.full.release()
-
-
-
-            print("-Dealer")
-            print('\n')
-
-
-
 
             # Last statement in this for loop - don't change
             pass
@@ -188,7 +184,7 @@ def main():
 
     # TODO create your one factory
 
-    newFactory = Factory(newQueue, empty, full)
+    newFactory = Factory(newQueue, empty, full, queue_stats)
 
 
     # TODO create your one dealership
