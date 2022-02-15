@@ -1,0 +1,153 @@
+18:16:25| Marble count                = 1000
+18:16:25| settings["creator-delay"]   = 0.01
+18:16:25| settings["bag-count"]       = 7
+18:16:25| settings["bagger-delay"]    = 0.05
+18:16:25| settings["assembler-delay"] = 0.05
+18:16:25| settings["wrapper-delay"]   = 0.05
+18:16:25| Create the processes
+18:16:25| Starting the processes
+18:16:26| Waiting for processes to finish
+18:16:42| Contents of boxes.txt
+18:16:42| Created - 18:16:28.354872:Large marble: Zeus, marbles: Duke Blue, Sage, Lumber, Middle Green Yellow, Mulberry, Golden Yellow, Orange Soda
+18:16:42| Created - 18:16:28.455972:Large marble: Lucky, marbles: Black Coral, Candy Pink, Russian Green, Royal Red, Ruby, Ruby, Spanish Orange
+18:16:42| Created - 18:16:28.559266:Large marble: Sure Shot, marbles: Icterine, Cotton Candy, Safety Yellow, Pale Goldenrod, Cobalt Blue, Pale Goldenrod, Lemon Lime
+18:16:42| Created - 18:16:28.665149:Large marble: Apollo, marbles: Pastel Gray, Royal Red, Middle Green, Stop Red, Dark Fuchsia, Royal Orange, Icterine
+18:16:42| Created - 18:16:28.768447:Large marble: Winner, marbles: Spanish Orange, Beaver, Auburn, Lilac Luster, Granny Smith Apple, Brink Pink, Cobalt Blue
+18:16:42| Created - 18:16:28.867056:Large marble: Hercules, marbles: La Salle Green, Sheen Green, Orange Peel, Pale Cerulean, Spanish Orange, White Smoke, Light Orchid
+18:16:42| Created - 18:16:28.968274:Large marble: The Boss, marbles: Blue, Mimi Pink, Lilac Luster, Royal Blue, Sheen Green, Gold, Sheen Green
+18:16:42| Created - 18:16:29.066699:Large marble: Zeus, marbles: Blue-Green, Blue Bell, White Smoke, Mint Cream, Blue Bell, Neon Pink, Auburn
+18:16:42| Created - 18:16:29.160317:Large marble: Sure Shot, marbles: Bistre Brown, Middle Green Yellow, Mulberry, Dark Fuchsia, Pastel Gray, Auburn, Neon Silver
+18:16:42| Created - 18:16:29.263935:Large marble: Spinner, marbles: Lumber, Granny Smith Apple, Fiery Rose, Stop Red, Lavender Purple, Duke Blue, La Salle Green
+18:16:42| Created - 18:16:29.357707:Large marble: Spinner, marbles: Bistre Brown, Neon Silver, Pale Cerulean, Antique Brass, Auburn, Purple Plum, Brown
+18:16:42| Created - 18:16:29.458978:Large marble: Winner, marbles: Indigo, Light Orchid, Pale Goldenrod, Terra Cotta, Middle Green Yellow, Mango Tango, Auburn
+18:16:42| Created - 18:16:29.558277:Large marble: Hercules, marbles: Lavender Purple, Royal Orange, Terra Cotta, Golden Yellow, Neon Dark Green, Platinum, Thulian Pink
+18:16:42| Created - 18:16:29.660630:Large marble: Lucky, marbles: Liver Chestnut, Bistre Brown, Icterine, Slate Blue, Rose Quartz, Mode Beige, Zomp
+18:16:42| Created - 18:16:29.755087:Large marble: Winner, marbles: Russian Violet, Isabelline, Lilac Luster, Blue-Green, Light Orchid, Mint Green, Antique Bronze
+18:16:43| Created - 18:16:29.854772:Large marble: Winner, marbles: Eerie Black, Light Orange, Big Dip O’ruby, Indigo, Lumber, Venetian Red, Outrageous Orange
+18:16:43| Created - 18:16:29.956735:Large marble: Lucky, marbles: Sheen Green, Purple, Eerie Black, Dark Moss Green, Black Coral, Royal Red, Icterine
+18:16:43| Created - 18:16:30.051089:Large marble: Winner, marbles: Isabelline, Terra Cotta, White Smoke, Icterine, Tuscan Brown, Gold, Fiery Rose
+18:16:43| Created - 18:16:30.151698:Large marble: Sure Shot, marbles: Safety Yellow, Tuscan Brown, Zomp, Russian Violet, Blue Bell, Pastel Gray, Candy Pink
+18:16:43| Created - 18:16:30.252027:Large marble: Winner, marbles: Gold, Spanish Orange, Blue-Green, Candy Pink, Safety Yellow, Middle Green, Lilac Luster
+18:16:43| Created - 18:16:30.359526:Large marble: Zeus, marbles: Sheen Green, Gold, Middle Red Purple, Outrageous Orange, Spanish Pink, Spanish Pink, Mango Tango
+18:16:43| Created - 18:16:30.459549:Large marble: Winner, marbles: Purple Plum, Royal Red, Blue, Maximum Violet, Tuscan Brown, Brown, Slate Blue
+18:16:43| Created - 18:16:30.578189:Large marble: Lucky, marbles: Spanish Pink, Sage, Black Coral, Liver Chestnut, Rose Quartz, Stop Red, Duke Blue
+18:16:43| Created - 18:16:30.675242:Large marble: Winner, marbles: Russian Green, Venetian Red, Gold, Middle Green Yellow, Lavender Purple, Russian Green, Golden Yellow
+18:16:43| Created - 18:16:30.772760:Large marble: Winner, marbles: Spanish Carmine, Middle Green, Lavender Blue, Orange Soda, Emerald, Neon Pink, Pale Goldenrod
+18:16:43| Created - 18:16:30.874933:Large marble: Hercules, marbles: Isabelline, Dark Moss Green, Thulian Pink, Silver Pink, Emerald, Antique Bronze, Auburn
+18:16:43| Created - 18:16:30.970605:Large marble: The Boss, marbles: Auburn, Dark Moss Green, Pastel Blue, Arylide Yellow, Candy Pink, Fiery Rose, Cotton Candy
+18:16:43| Created - 18:16:31.067776:Large marble: Apollo, marbles: Almond, Neon Pink, Candy Pink, Russian Violet, Brown, Dark Fuchsia, Tuscan Brown
+18:16:43| Created - 18:16:31.172433:Large marble: Sure Shot, marbles: Blue Bell, Pale Goldenrod, Pale Plum, Royal Orange, Liver Chestnut, Russian Violet, Rose Quartz
+18:16:43| Created - 18:16:31.279151:Large marble: Lucky, marbles: Sage, Vegas Gold, Maximum Blue, Sheen Green, Dark Fuchsia, Gold, Liver Chestnut
+18:16:43| Created - 18:16:31.379027:Large marble: 5-Star, marbles: Duke Blue, Brown, Beaver, Beaver, Honeydew, Dark Moss Green, Pastel Gray
+18:16:43| Created - 18:16:31.474223:Large marble: Apollo, marbles: Honeydew, Granny Smith Apple, Mimi Pink, Granny Smith Apple, La Salle Green, Mint Green, Sheen Green
+18:16:43| Created - 18:16:31.569122:Large marble: The Boss, marbles: Lemon Lime, Gold, Beaver, Golden Yellow, Mimi Pink, Emerald, Pale Taupe
+18:16:43| Created - 18:16:31.663517:Large marble: The Boss, marbles: Zomp, Zomp, Safety Yellow, Fiery Rose, Gold, Stop Red, Duke Blue
+18:16:43| Created - 18:16:31.760381:Large marble: Zeus, marbles: Slate Blue, Candy Pink, Ivory, Mulberry, Tuscan Brown, Isabelline, Purple Plum
+18:16:43| Created - 18:16:31.858455:Large marble: Hercules, marbles: Pale Plum, Purple, Brown, Lavender Purple, Indigo, Rose Dust, Outrageous Orange
+18:16:43| Created - 18:16:31.959866:Large marble: Apollo, marbles: Mint Green, Pastel Gray, Cobalt Blue, Icterine, Outrageous Orange, Isabelline, Neon Pink
+18:16:43| Created - 18:16:32.054897:Large marble: 5-Star, marbles: Lilac Luster, Pale Goldenrod, Pastel Blue, Slate Blue, Candy Pink, Thulian Pink, Black Coral
+18:16:43| Created - 18:16:32.148264:Large marble: Hercules, marbles: Brink Pink, Middle Green Yellow, Blue, Big Dip O’ruby, Chinese Red, Cotton Candy, Lemon Lime
+18:16:43| Created - 18:16:32.244849:Large marble: Winner, marbles: Blue, La Salle Green, Spanish Carmine, Neon Dark Green, Spanish Carmine, Pastel Gray, White Smoke
+18:16:43| Created - 18:16:32.345860:Large marble: Sure Shot, marbles: Middle Green, Big Dip O’ruby, Pale Cerulean, Green, Gold, Eerie Black, Blue
+18:16:43| Created - 18:16:32.449629:Large marble: The Boss, marbles: Vegas Gold, Dark Moss Green, Sheen Green, Cobalt Blue, Blue, Indigo, Auburn
+18:16:43| Created - 18:16:32.553499:Large marble: Sure Shot, marbles: Orange Peel, Rose Quartz, Liver Chestnut, Neon Silver, Mint Green, Middle Red Purple, Tuscan Brown
+18:16:43| Created - 18:16:32.652430:Large marble: Spinner, marbles: Neon Pink, Eerie Black, Lavender Purple, Spanish Orange, Neon Pink, Slate Blue, Blue Bell
+18:16:43| Created - 18:16:32.753601:Large marble: Hercules, marbles: Spanish Carmine, Maximum Violet, Lavender Purple, Golden Yellow, Icterine, Ivory, Outrageous Orange
+18:16:43| Created - 18:16:32.847392:Large marble: Winner, marbles: Neon Pink, Neon Pink, Granny Smith Apple, Antique Bronze, Royal Orange, Mango Tango, Mimi Pink
+18:16:43| Created - 18:16:32.942535:Large marble: Lucky, marbles: Pale Goldenrod, Arylide Yellow, Outrageous Orange, Mint Cream, Brown, Neon Dark Green, Neon Silver
+18:16:43| Created - 18:16:33.040972:Large marble: Spinner, marbles: Zomp, Russian Violet, Eerie Black, Antique Bronze, Antique Bronze, Dark Fuchsia, Golden Yellow
+18:16:43| Created - 18:16:33.141827:Large marble: Sure Shot, marbles: Orange Peel, Indigo, Orange Peel, Neon Pink, Light Orchid, Pastel Blue, Royal Orange
+18:16:43| Created - 18:16:33.239359:Large marble: 5-Star, marbles: Indigo, Spanish Orange, Dark Moss Green, Tuscan Brown, Silver Chalice, Orange Soda, Cobalt Blue
+18:16:43| Created - 18:16:33.352231:Large marble: Spinner, marbles: Duke Blue, Maximum Blue, Sage, Safety Yellow, Pale Goldenrod, Spanish Pink, Thulian Pink
+18:16:43| Created - 18:16:33.446388:Large marble: Apollo, marbles: Gold, Royal Orange, Green, Beaver, Liver Chestnut, Royal Orange, Black Coral
+18:16:43| Created - 18:16:33.546696:Large marble: Hercules, marbles: Lavender Purple, Golden Yellow, Icterine, Stop Red, Pale Taupe, Maximum Blue, Middle Green Yellow
+18:16:43| Created - 18:16:33.654664:Large marble: Spinner, marbles: Gold, Silver Pink, Neon Dark Green, Antique Brass, Lavender Purple, Dark Fuchsia, Middle Red Purple
+18:16:43| Created - 18:16:33.754154:Large marble: Apollo, marbles: Orange Soda, Chinese Red, La Salle Green, Dark Fuchsia, Royal Blue, Brown, Shandy
+18:16:43| Created - 18:16:33.857228:Large marble: Hercules, marbles: Bistre Brown, Mint Cream, Chinese Red, Rose Quartz, Mode Beige, Platinum, Pastel Blue
+18:16:43| Created - 18:16:33.960286:Large marble: Sure Shot, marbles: Lavender Purple, Terra Cotta, Honeydew, Stop Red, Orange Peel, Rose Dust, Orange Peel
+18:16:43| Created - 18:16:34.059714:Large marble: Lucky, marbles: Antique Bronze, Isabelline, Thulian Pink, Blue Bell, Duke Blue, Maximum Purple, Shandy
+18:16:43| Created - 18:16:34.158530:Large marble: Hercules, marbles: Green, Royal Red, Lemon Lime, Zomp, Candy Pink, Brown, Emerald
+18:16:43| Created - 18:16:34.263823:Large marble: 5-Star, marbles: Royal Orange, Lilac Luster, Brink Pink, Mint Green, Mango Tango, Middle Green, Middle Red Purple
+18:16:43| Created - 18:16:34.360199:Large marble: Zeus, marbles: Isabelline, Isabelline, Zomp, Russian Violet, Cobalt Blue, Dark Moss Green, Russian Violet
+18:16:43| Created - 18:16:34.463369:Large marble: Zeus, marbles: Brown, Purple Plum, Honeydew, Purple, Chinese Red, La Salle Green, Light Orchid
+18:16:43| Created - 18:16:34.565043:Large marble: Sure Shot, marbles: Auburn, Beaver, Maximum Violet, Orange Soda, White Smoke, Stop Red, Neon Pink
+18:16:43| Created - 18:16:34.673004:Large marble: Apollo, marbles: Dark Moss Green, Middle Green Yellow, Dark Fuchsia, Lavender Blue, Arylide Yellow, Gold, Antique Bronze
+18:16:43| Created - 18:16:34.770339:Large marble: Zeus, marbles: Middle Green Yellow, Black Coral, La Salle Green, Icterine, Vegas Gold, Purple Plum, Rose Quartz
+18:16:43| Created - 18:16:34.869018:Large marble: Lucky, marbles: Dark Moss Green, La Salle Green, Royal Orange, Thulian Pink, Middle Red Purple, Antique Brass, Lemon Lime
+18:16:43| Created - 18:16:34.973915:Large marble: Sure Shot, marbles: Dark Fuchsia, Icterine, Outrageous Orange, Duke Blue, Silver Pink, Gold, Blue
+18:16:43| Created - 18:16:35.071396:Large marble: 5-Star, marbles: Big Dip O’ruby, Beaver, Thulian Pink, Thulian Pink, Dark Fuchsia, Zomp, Light Orange
+18:16:43| Created - 18:16:35.176008:Large marble: Hercules, marbles: Orange Soda, Slate Blue, Purple Plum, Pale Plum, Big Dip O’ruby, Tuscan Brown, Ivory
+18:16:43| Created - 18:16:35.289402:Large marble: 5-Star, marbles: Venetian Red, Almond, Blue Bell, Bistre Brown, Cotton Candy, Terra Cotta, Indigo
+18:16:43| Created - 18:16:35.388558:Large marble: Apollo, marbles: Maximum Blue, Brink Pink, Russian Violet, Antique Brass, Lavender Purple, Mango Tango, Candy Pink
+18:16:43| Created - 18:16:35.494665:Large marble: Winner, marbles: Rose Quartz, Safety Yellow, Eerie Black, Chinese Red, Platinum, Chinese Red, Silver Pink
+18:16:43| Created - 18:16:35.596394:Large marble: Winner, marbles: Middle Green, Tuscan Brown, Blue Bell, Mode Beige, Russian Green, Mimi Pink, Outrageous Orange
+18:16:43| Created - 18:16:35.705505:Large marble: Spinner, marbles: Ivory, Gold, Eerie Black, Mint Green, Pastel Gray, Cobalt Blue, Neon Silver
+18:16:43| Created - 18:16:35.804070:Large marble: 5-Star, marbles: Thulian Pink, Blue, Orange Soda, Blue, Russian Green, Pale Taupe, Brown
+18:16:43| Created - 18:16:35.899579:Large marble: Sure Shot, marbles: Royal Red, Light Orange, Platinum, Light Orange, Venetian Red, Orange Soda, Cobalt Blue
+18:16:43| Created - 18:16:36.002241:Large marble: The Boss, marbles: Lemon Lime, Ruby, Brown, Maximum Purple, Arylide Yellow, Pastel Gray, Emerald
+18:16:43| Created - 18:16:36.106140:Large marble: Winner, marbles: Outrageous Orange, Mint Cream, Silver Chalice, Liver Chestnut, Lumber, Isabelline, Light Orchid
+18:16:43| Created - 18:16:36.205692:Large marble: Apollo, marbles: Russian Violet, Blue-Green, Royal Red, La Salle Green, Neon Pink, Lilac Luster, Blue-Green
+18:16:43| Created - 18:16:36.302230:Large marble: Lucky, marbles: Pale Taupe, Light Orchid, Dark Fuchsia, Mint Cream, Bistre Brown, Auburn, Light Orange
+18:16:43| Created - 18:16:36.404202:Large marble: Winner, marbles: Spanish Pink, Slate Blue, Rose Dust, Rose Dust, Venetian Red, Shandy, Golden Yellow
+18:16:43| Created - 18:16:36.504668:Large marble: Spinner, marbles: Black Coral, Spanish Orange, Terra Cotta, Honeydew, Almond, Eerie Black, Orange Peel
+18:16:43| Created - 18:16:36.612735:Large marble: Sure Shot, marbles: Russian Violet, Terra Cotta, Fiery Rose, Chinese Red, Spanish Orange, Platinum, Brink Pink
+18:16:43| Created - 18:16:36.716748:Large marble: Sure Shot, marbles: Granny Smith Apple, Dark Fuchsia, Russian Green, Platinum, Middle Red Purple, Venetian Red, Purple Plum
+18:16:43| Created - 18:16:36.822664:Large marble: Zeus, marbles: Brink Pink, Pale Cerulean, Black Coral, Rose Quartz, Neon Silver, Isabelline, Granny Smith Apple
+18:16:43| Created - 18:16:36.925209:Large marble: The Boss, marbles: Middle Green Yellow, Thulian Pink, Liver Chestnut, Big Dip O’ruby, Isabelline, Mint Cream, Rose Dust
+18:16:43| Created - 18:16:37.027208:Large marble: Winner, marbles: Middle Green, Cotton Candy, Orange Soda, Maximum Violet, Lilac Luster, Mode Beige, Mint Green
+18:16:43| Created - 18:16:37.129750:Large marble: Spinner, marbles: Lilac Luster, Lumber, Royal Red, Ruby, Golden Yellow, Dark Fuchsia, Lilac Luster
+18:16:43| Created - 18:16:37.230959:Large marble: Zeus, marbles: Vegas Gold, Middle Red Purple, Mint Green, Indigo, Spanish Carmine, Cotton Candy, Arylide Yellow
+18:16:43| Created - 18:16:37.331921:Large marble: Zeus, marbles: Ivory, Cotton Candy, Emerald, Vegas Gold, Blue-Green, Maximum Violet, Royal Blue
+18:16:43| Created - 18:16:37.439509:Large marble: 5-Star, marbles: Honeydew, Vegas Gold, Neon Silver, Lilac Luster, Green, Neon Pink, Safety Yellow
+18:16:43| Created - 18:16:37.542787:Large marble: The Boss, marbles: Indigo, Sage, Brown, Icterine, Mint Cream, Safety Yellow, Cotton Candy
+18:16:43| Created - 18:16:37.649417:Large marble: Hercules, marbles: Antique Bronze, Arylide Yellow, Neon Silver, Terra Cotta, Neon Silver, Black Coral, Duke Blue
+18:16:43| Created - 18:16:37.746154:Large marble: Lucky, marbles: Lavender Blue, Dark Moss Green, Russian Green, Silver Chalice, Orange Soda, Lavender Blue, Pale Goldenrod
+18:16:43| Created - 18:16:37.856033:Large marble: 5-Star, marbles: Silver Chalice, Orange Peel, Terra Cotta, Cobalt Blue, Tuscan Brown, Light Orange, Royal Red
+18:16:43| Created - 18:16:37.959834:Large marble: Hercules, marbles: Spanish Pink, Ruby, Duke Blue, Rose Dust, Icterine, Pale Taupe, Ruby
+18:16:43| Created - 18:16:38.059739:Large marble: Winner, marbles: Terra Cotta, Brown, Light Orange, Duke Blue, Brink Pink, Middle Red Purple, Light Orange
+18:16:43| Created - 18:16:38.164073:Large marble: 5-Star, marbles: Arylide Yellow, Maximum Blue, Sheen Green, Brown, Middle Green Yellow, Dark Fuchsia, Neon Dark Green
+18:16:43| Created - 18:16:38.266531:Large marble: The Boss, marbles: Middle Red Purple, Pastel Gray, Blue-Green, Neon Pink, Neon Silver, Mango Tango, Almond
+18:16:43| Created - 18:16:38.366972:Large marble: The Boss, marbles: Stop Red, Orange Peel, Pale Goldenrod, Eerie Black, Orange Soda, Brink Pink, Liver Chestnut
+18:16:43| Created - 18:16:38.471612:Large marble: Winner, marbles: Russian Green, Orange Peel, Sheen Green, Light Orchid, Venetian Red, Mint Green, Shandy
+18:16:43| Created - 18:16:38.571303:Large marble: Sure Shot, marbles: Gold, Brown, Green, Mode Beige, Zomp, Cotton Candy, Neon Dark Green
+18:16:43| Created - 18:16:38.672225:Large marble: 5-Star, marbles: Lemon Lime, Royal Blue, Middle Red Purple, Light Orange, Lemon Lime, Blue-Green, Mimi Pink
+18:16:43| Created - 18:16:38.770574:Large marble: 5-Star, marbles: White Smoke, Sheen Green, Ruby, Pale Cerulean, Blue-Green, Orange Soda, Vegas Gold
+18:16:43| Created - 18:16:38.873856:Large marble: 5-Star, marbles: Terra Cotta, Venetian Red, Green, Spanish Carmine, Brown, Gold, Blue Bell
+18:16:43| Created - 18:16:38.976322:Large marble: The Boss, marbles: Thulian Pink, Purple, Zomp, Honeydew, Silver Pink, Almond, Antique Bronze
+18:16:43| Created - 18:16:39.076661:Large marble: Apollo, marbles: Mulberry, Spanish Carmine, Beaver, Duke Blue, Black Coral, Duke Blue, Blue Bell
+18:16:43| Created - 18:16:39.181322:Large marble: Sure Shot, marbles: Purple Plum, Slate Blue, Rose Quartz, Orange Soda, Vegas Gold, Green, Bistre Brown
+18:16:43| Created - 18:16:39.283961:Large marble: Lucky, marbles: Brown, Spanish Orange, Spanish Pink, Almond, Mango Tango, Brink Pink, Royal Orange
+18:16:43| Created - 18:16:39.389352:Large marble: Sure Shot, marbles: Purple, Maximum Purple, Light Orange, Dark Fuchsia, Candy Pink, Purple Plum, Spanish Orange
+18:16:43| Created - 18:16:39.492518:Large marble: Hercules, marbles: Fiery Rose, Maximum Violet, Stop Red, Fiery Rose, Slate Blue, Silver Pink, Stop Red
+18:16:43| Created - 18:16:39.602785:Large marble: Winner, marbles: Maximum Blue, Green, Black Coral, Vegas Gold, Gold, Neon Silver, Rose Quartz
+18:16:43| Created - 18:16:39.707964:Large marble: The Boss, marbles: Neon Dark Green, Arylide Yellow, Sheen Green, Ruby, Mint Green, Royal Red, Cobalt Blue
+18:16:43| Created - 18:16:39.812647:Large marble: Apollo, marbles: Orange Peel, Maximum Purple, Lavender Blue, Icterine, Stop Red, Big Dip O’ruby, Neon Pink
+18:16:43| Created - 18:16:39.913230:Large marble: Sure Shot, marbles: Bistre Brown, Candy Pink, Green, Russian Violet, Vegas Gold, Duke Blue, Sage
+18:16:43| Created - 18:16:40.010969:Large marble: 5-Star, marbles: Shandy, White Smoke, Pale Taupe, Slate Blue, Spanish Carmine, Ruby, Pastel Blue
+18:16:43| Created - 18:16:40.120334:Large marble: The Boss, marbles: Lumber, Antique Brass, Brown, Purple, Arylide Yellow, Golden Yellow, Pale Plum
+18:16:43| Created - 18:16:40.216992:Large marble: Zeus, marbles: Silver Chalice, La Salle Green, Cotton Candy, Eerie Black, Rose Dust, Blue Bell, Antique Bronze
+18:16:43| Created - 18:16:40.324358:Large marble: 5-Star, marbles: Terra Cotta, Eerie Black, Pale Taupe, Brown, Antique Bronze, Lilac Luster, Gold
+18:16:43| Created - 18:16:40.427831:Large marble: Spinner, marbles: Thulian Pink, Golden Yellow, Spanish Pink, Black Coral, Purple, Terra Cotta, Royal Red
+18:16:43| Created - 18:16:40.527662:Large marble: Zeus, marbles: Shandy, Antique Bronze, Duke Blue, Ruby, Sheen Green, Platinum, Rose Dust
+18:16:43| Created - 18:16:40.640785:Large marble: The Boss, marbles: Rose Quartz, Purple Plum, Green, Ruby, Granny Smith Apple, Beaver, Big Dip O’ruby
+18:16:43| Created - 18:16:40.736960:Large marble: Sure Shot, marbles: Fiery Rose, Purple Plum, Pastel Gray, Sage, Shandy, Chinese Red, Zomp
+18:16:43| Created - 18:16:40.834396:Large marble: 5-Star, marbles: Mulberry, Fiery Rose, Silver Pink, Safety Yellow, Maximum Purple, Fiery Rose, Chinese Red
+18:16:43| Created - 18:16:40.937804:Large marble: Hercules, marbles: Royal Red, Orange Soda, Dark Fuchsia, Lilac Luster, Outrageous Orange, Eerie Black, Orange Soda
+18:16:43| Created - 18:16:41.034718:Large marble: Winner, marbles: Tuscan Brown, Blue, Brown, Vegas Gold, Green, Brown, Mint Green
+18:16:43| Created - 18:16:41.141521:Large marble: The Boss, marbles: Spanish Orange, Maximum Blue, Light Orange, Lemon Lime, Stop Red, Royal Orange, Rose Dust
+18:16:43| Created - 18:16:41.242473:Large marble: Lucky, marbles: Antique Bronze, Lilac Luster, Gold, Russian Green, Green, Golden Yellow, Purple
+18:16:43| Created - 18:16:41.347150:Large marble: Spinner, marbles: Silver Pink, Brink Pink, Purple, Ivory, Silver Chalice, Cobalt Blue, Dark Moss Green
+18:16:43| Created - 18:16:41.449066:Large marble: Spinner, marbles: Venetian Red, Mango Tango, Dark Moss Green, Outrageous Orange, Light Orange, Lavender Purple, Mint Green
+18:16:43| Created - 18:16:41.557508:Large marble: The Boss, marbles: Blue-Green, Lavender Purple, Maximum Violet, Shandy, Thulian Pink, Isabelline, Neon Pink
+18:16:43| Created - 18:16:41.654497:Large marble: Hercules, marbles: Silver Chalice, Venetian Red, Antique Bronze, Royal Red, Pastel Gray, Rose Dust, Lumber
+18:16:43| Created - 18:16:41.757775:Large marble: Apollo, marbles: Middle Green Yellow, Eerie Black, Eerie Black, Gold, Black Coral, Cobalt Blue, Royal Red
+18:16:43| Created - 18:16:41.859582:Large marble: Spinner, marbles: Spanish Orange, Orange Soda, Middle Green Yellow, Liver Chestnut, Isabelline, Neon Dark Green, Cotton Candy
+18:16:43| Created - 18:16:41.963533:Large marble: Winner, marbles: Honeydew, Middle Green, Isabelline, Auburn, Honeydew, Stop Red, Light Orchid
+18:16:43| Created - 18:16:42.066360:Large marble: Winner, marbles: Platinum, Neon Dark Green, Ivory, Silver Chalice, Platinum, Shandy, Pale Plum
+18:16:43| Created - 18:16:42.166904:Large marble: Apollo, marbles: Brink Pink, Duke Blue, Icterine, Mimi Pink, Blue, Fiery Rose, Spanish Carmine
+18:16:43| Created - 18:16:42.264707:Large marble: Apollo, marbles: Duke Blue, Stop Red, Shandy, Pastel Gray, Mint Green, Shandy, Rose Dust
+18:16:43| Created - 18:16:42.368989:Large marble: The Boss, marbles: Neon Pink, Pale Taupe, Stop Red, Brown, Neon Silver, Rose Dust, Antique Bronze
+18:16:43| Created - 18:16:42.471652:Large marble: Sure Shot, marbles: Mint Cream, Dark Moss Green, Big Dip O’ruby, Terra Cotta, Mint Green, Spanish Pink, Dark Moss Green
+18:16:43| Created - 18:16:42.570645:Large marble: Apollo, marbles: Maximum Purple, Mimi Pink, Fiery Rose, Shandy, Gold, Mode Beige, Mode Beige
+18:16:43| Created - 18:16:42.669357:Large marble: The Boss, marbles: Cotton Candy, Royal Blue, Antique Brass, Spanish Carmine, Beaver, Blue-Green, Light Orchid
+18:16:43| Created - 18:16:42.757417:Large marble: Lucky, marbles: TO

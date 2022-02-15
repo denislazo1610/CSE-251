@@ -87,7 +87,7 @@ class Queue251():
 class Factory(threading.Thread):
     """ This is a factory.  It will create cars and place them on the car queue """
 
-    def __init__(self, queue, empty, full, factoryList, numberFactory, totalCars, barrier, dealerCount):
+    def __init__(self, queue, empty, full, factoryList, numberFactory, barrier, dealerCount):
         threading.Thread.__init__(self)
         self.cars_to_produce = random.randint(200, 300)     # Don't change
         self.queue = queue 
@@ -97,8 +97,6 @@ class Factory(threading.Thread):
         self.numberFactory = numberFactory
         self.barrier = barrier
         self.numDealers = dealerCount
-        
-        self.totalCars = totalCars
 
     def join(self, *args, **kwargs):
         super().join(*args, **kwargs)
@@ -115,7 +113,7 @@ class Factory(threading.Thread):
             newCar = Car()
             self.queue.put(newCar)
             self.factoryList[self.numberFactory] += 1
-            self.totalCars += 1
+            # self.totalCars += 1
 
             # print(self.totalCars)
 
@@ -144,7 +142,7 @@ class Factory(threading.Thread):
 class Dealer(threading.Thread):
     """ This is a dealer that receives cars """
 
-    def __init__(self, queue, empty, full, dealerList,  numberDealer, totalCarCreated):
+    def __init__(self, queue, empty, full, dealerList,  numberDealer):
         threading.Thread.__init__(self)
         self.queue = queue
         self.dealerList = dealerList
@@ -152,7 +150,7 @@ class Dealer(threading.Thread):
         self.full = full
         self.quantitySold = 0
         self.numberDealer = numberDealer
-        self.totalCarCreated = totalCarCreated
+        
 
 
     def run(self):
@@ -161,8 +159,6 @@ class Dealer(threading.Thread):
             # print(f'This is Dealer N{self.numberDealer + 1}')
             # print('\n')
 
-            # if(self.quantitySold == 200):
-            #     break
             
             self.empty.acquire()
             outCar = self.queue.get()
@@ -208,16 +204,15 @@ def run_production(factory_count, dealer_count):
     factory = []
     dealer = []
 
-
     totalCarCreated = 0
-
+    
     for i in range(factory_count):
-        factory.append(Factory(newQueue, empty, full, factory_stats, i, totalCarCreated, barrier, dealer_count))
+        factory.append(Factory(newQueue, empty, full, factory_stats, i, barrier, dealer_count))
 
 
     # TODO create your dealerships
     for i in range(dealer_count):
-        dealer.append(Dealer(newQueue, empty, full, dealer_stats, i, totalCarCreated))
+        dealer.append(Dealer(newQueue, empty, full, dealer_stats, i))
 
     log.start_timer()
 
