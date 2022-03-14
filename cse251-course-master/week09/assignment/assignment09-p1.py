@@ -11,10 +11,11 @@ Instructions:
 - Do not use any other Python modules other than the ones included
 
 """
+# from curses import COLOR_BLACK
 import math
 from screen import Screen
-from maze import Maze
-import cv2
+from maze import Maze, COLOR_BLACK, COLOR_VISITED
+import cv2, sys
 
 # Include cse 251 common Python files - Dont change
 from cse251 import *
@@ -25,6 +26,48 @@ COLOR = (0, 0, 255)
 
 
 # TODO add any functions
+def recursionPath(path, maze):
+    lastSpot = path[-1]
+    maze.move(*lastSpot, COLOR)
+    possibleMoves = maze.get_possible_moves(*lastSpot)
+
+
+    if(maze.at_end(*lastSpot) != True):
+        if(len(possibleMoves) == 1):
+            
+            path.append(*possibleMoves)
+            info = recursionPath(path, maze)
+            if (info == 'Dead End'):
+                spotRemove = path.pop()
+                maze.restore(*spotRemove)
+                return 'Dead End'
+            else:
+                return info
+
+
+        elif(len(possibleMoves) == 0):
+            
+            spotRemove = path.pop()
+            maze.restore(*spotRemove)
+            return 'Dead End'
+
+
+        else:
+            
+            for i in possibleMoves:
+                path.append(i)
+                info = recursionPath(path, maze)
+                if (info != 'Dead End'):
+                    lastspot = info[-1]
+                    if (maze.at_end(*lastspot)):
+                        return info
+                
+            spotRemove = path.pop()
+            maze.restore(*spotRemove)
+            return 'Dead End'
+
+
+    return path
 
 def solve_path(maze):
     """ Solve the maze and return the path found between the start and end positions.  
@@ -32,6 +75,11 @@ def solve_path(maze):
         
     # TODO start add code here
     path = []
+    start = maze.get_start_pos()
+    path.append(start) 
+
+    path = recursionPath(path, maze)
+
     return path
 
 
@@ -71,6 +119,10 @@ def find_paths(log):
     files = ('verysmall.bmp', 'verysmall-loops.bmp', 
             'small.bmp', 'small-loops.bmp', 
             'small-odd.bmp', 'small-open.bmp', 'large.bmp', 'large-loops.bmp')
+
+    # files = ('verysmall.bmp', 'verysmall-loops.bmp',)
+
+    
 
     log.write('*' * 40)
     log.write('Part 1')

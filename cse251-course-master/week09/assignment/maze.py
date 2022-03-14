@@ -70,7 +70,7 @@ class Maze():
         """ Change a color of a square """
         state = self._state(row, col)
         if state != OPEN:
-            print(f'ERROR: You are trying to move on a spot that is a wall or already visited: {row}, {col}, color = {self.colors[row][col]}')
+            # print(f'ERROR: You are trying to move on a spot that is a wall or already visited: {row}, {col}, color = {self.colors[row][col]}')
             return
 
         self.colors[row][col] = color

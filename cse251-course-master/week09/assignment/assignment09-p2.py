@@ -30,6 +30,7 @@ import math
 import threading 
 from screen import Screen
 from maze import Maze
+import sys
 
 import cv2
 
@@ -72,11 +73,59 @@ def get_color():
     current_color_index += 1
     return color
 
+def recursionPath(path, maze, colorChoosen, lastAdded):
+    global thread_count
+
+    path.append(lastAdded)
+    lastSpot = path[-1]
+    maze.move(*lastSpot, colorChoosen)
+    possibleMoves = maze.get_possible_moves(*lastSpot)
+
+    if(maze.at_end(*lastSpot) != True):
+        if(len(possibleMoves) == 1):
+            
+            info = recursionPath(path, maze, colorChoosen,*possibleMoves)
+
+            return info
+
+        elif(len(possibleMoves) == 0):
+            return 'Dead End'
+
+
+        else:
+            
+            # threads = []
+            
+
+            for i in possibleMoves:
+                # print('POSSIBLE WAYS')
+                thread_count = thread_count + 1
+                # print(thread_count)
+                # threads.append(threading.Thread(target=recursionPath, args=(path, maze,get_color(), i)))         
+                info = recursionPath(path, maze, get_color(),i)
+                # threads[-1].start()
+                if (info != 'Dead End'):
+                    lastspot = info[-1]
+                    if (maze.at_end(*lastspot)):
+                        return info
+                        
+            # for t in threads:                                                           
+            #     t.join()      
+                
+            spotRemove = path.pop()
+            maze.restore(*spotRemove)
+            return 'Dead End'
+
+    return path
 
 def solve_find_end(maze):
     """ finds the end position using threads.  Nothing is returned """
     # When one of the threads finds the end position, stop all of them
+    path = []
+    
+    colorFirst = get_color()
 
+    path = recursionPath(path, maze, colorFirst, maze.get_start_pos())
 
     pass
 

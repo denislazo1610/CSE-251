@@ -58,6 +58,11 @@ def task_prime(value):
             - or -
         {value} is not prime
     """
+    if is_prime(value):
+        return f'{value} is prime'
+    else:
+        return f'{value} is not prime'
+
     pass
 
 def task_word(word):
@@ -68,13 +73,21 @@ def task_word(word):
             - or -
         {word} not found *****
     """
-    pass
+    with open('words.txt') as f:
+        if word in f.read():
+            return f'{word} Found'
+        else:
+            return f'{word} not found'
+           
+    pass 
 
 def task_upper(text):
     """
     Add the following to the global list:
         {text} ==>  uppercase version of {text}
     """
+    text = text.upper()
+    return text
     pass
 
 def task_sum(start_value, end_value):
@@ -82,6 +95,11 @@ def task_sum(start_value, end_value):
     Add the following to the global list:
         sum of {start_value:,} to {end_value:,} = {total:,}
     """
+    sum = 0
+    for i in range(start_value, end_value):
+        sum += i
+
+    return sum
     pass
 
 def task_name(url):
@@ -92,6 +110,10 @@ def task_name(url):
             - or -
         {url} had an error receiving the information
     """
+    info = requests.get(url)
+    info = info.json()
+    string = f'{url} has name {info["name"]}'
+    return string
     pass
 
 
@@ -100,6 +122,11 @@ def main():
     log.start_timer()
 
     # TODO Create process pools
+    poolPrime = mp.Pool(1)
+    poolWord = mp.Pool(1)
+    poolUpper = mp.Pool(1)
+    poolSum = mp.Pool(1)
+    poolName = mp.Pool(1)
 
     count = 0
     task_files = glob.glob("*.task")
@@ -110,20 +137,38 @@ def main():
         print(task)
         count += 1
         task_type = task['task']
+        
         if task_type == TYPE_PRIME:
-            task_prime(task['value'])
+            poolPrime.apply_async(task_prime, args = {task['value'],}, callback = lambda x: result_primes.append(x))
+            # task_prime(task['value'])
         elif task_type == TYPE_WORD:
-            task_word(task['word'])
+            poolWord.apply_async(task_word, args = {task['word'],}, callback = lambda x: result_words.append(x))
+            # task_word(task['word'])
         elif task_type == TYPE_UPPER:
-            task_upper(task['text'])
+            poolUpper.apply_async(task_upper, args = {task['text'],}, callback = lambda x: result_upper.append(x))
+            # task_upper(task['text'])
         elif task_type == TYPE_SUM:
-            task_sum(task['start'], task['end'])
+            poolSum.apply_async(task_sum, args = {task['start'],task['end']}, callback = lambda x: result_sums.append(x))
+            # task_sum(task['start'], task['end'])
         elif task_type == TYPE_NAME:
-            task_name(task['url'])
+            poolName.apply_async(task_name, args = {task['url'],}, callback = lambda x: result_names.append(x))
+            # task_name(task['url'])
         else:
             log.write(f'Error: unknown task type {task_type}')
 
     # TODO start and wait pools
+
+    poolPrime.close()
+    poolWord.close()
+    poolUpper.close()
+    poolSum.close()
+    poolName.close()
+
+    poolPrime.join()
+    poolWord.join()
+    poolUpper.join()
+    poolSum.join()
+    poolName.join()
 
 
     # Do not change the following code (to the end of the main function)
