@@ -51,6 +51,7 @@ Add any comments for me:
 
 
 """
+from multiprocessing import Semaphore, shared_memory
 import random
 from multiprocessing.managers import SharedMemoryManager
 import multiprocessing as mp
@@ -58,24 +59,75 @@ import multiprocessing as mp
 BUFFER_SIZE = 10
 READERS = 2
 WRITERS = 2
+def send_info(shared, start, end, sempahoreToAdd, semaphoreToTake):
+  
+  for i in range(start, end):
+    # print(sempahoreToAdd) 
+    sempahoreToAdd.acquire()
+    for x in range(0, 10):
+      if shared[x] == 0:
+        shared[x] = i
+        semaphoreToTake.release()
+        # print(shared)
+        break;
+
+
+  return 0
+
+def receiving_info(shared, sempahoreToAdd, semaphoreToTake):
+  while True:
+
+    for x in range(0, 10):
+      semaphoreToTake.acquire()
+      if shared[x] != 0:
+        print(f'{shared[x]} value received')
+        shared[x] = 0
+        sempahoreToAdd.release()
+
+
 
 def main():
 
     # This is the number of values that the writer will send to the reader
-    items_to_send = random.randint(1000, 10000)
+    # items_to_send = random.randint(1000, 10000)
+    items_to_send = 20
+
+
 
     smm = SharedMemoryManager()
     smm.start()
 
     # TODO - Create a ShareableList to be used between the processes
 
+    sharedList = shared_memory.ShareableList([0] * BUFFER_SIZE)
+    # print(sharedList)
+   
+
+
     # TODO - Create any lock(s) or semaphore(s) that you feel you need
+    full = Semaphore(10)
+    
+    empty = Semaphore(0)
 
     # TODO - create reader and writer processes
 
+    writer = mp.Process(target=send_info, args=(sharedList, 1, items_to_send + 1, full, empty))
+    reader = mp.Process(target=receiving_info, args=(sharedList, full, empty ))
+
     # TODO - Start the processes and wait for them to finish
 
+    writer.start()
+    reader.start()
+
+
+    writer.join()
+    reader.join()
+
     print(f'{items_to_send} values sent')
+
+
+    # for i in range(BUFFER_SIZE):
+    #   print(shared[i], end=' ')
 
     # TODO - Display the number of numbers/items received by the reader.
     #        Can not use "items_to_send", must be a value collected
